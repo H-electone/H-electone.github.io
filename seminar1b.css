@@ -1,0 +1,20 @@
+h1{
+    background-color: #afeeee
+}
+body{
+    background-color: #f0fff0
+}
+#startButton {
+  color: #fff;
+  background-color: #0037eb;
+  font-size: 20px;
+  width: 80px;
+  border-radius:30px;
+}
+#stopButton {
+    color: #fff;
+    background-color: #0037eb;
+    font-size: 20px;
+    width: 80px;
+    border-radius:30px;
+  }
