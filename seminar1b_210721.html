@@ -170,7 +170,7 @@ asr.onresult = function(event){
             }
         
             if(typeof webpage != 'undefined' && webpage != ""){
-                output += transcript + ' => ' + answer + '　<a href="' + webpage + '">こちら</a><br>';
+                output += transcript + ' => ' + answer + '　<a href="' + webpage + '">' + webpage + '</a><br>';
             } else {
                 output += transcript + ' => ' + answer + '<br>';
             }
@@ -206,6 +206,8 @@ stopButton.addEventListener('click', function() {
     asr.stop();
 })
 </script>
-
+<p>
+Web Services by Yahoo! JAPAN （https://developer.yahoo.co.jp/about）
+</p>
 </body>
 </html>
