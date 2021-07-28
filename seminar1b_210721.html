@@ -27,7 +27,7 @@ const APIID = "dj00aiZpPUpkSGM4dU9hR1FRdSZzPWNvbnN1bWVyc2VjcmV0Jng9ZGI-"; // あ
 
 // 応答の定義（ハッシュ）    
 var response = {
-    "あなた,誰": ["わたしはアレクサではありません", ""],
+    "あなた,誰": ["わたしはWikipediaのアシスタントです。「Wikipedia」と話しかけてみてください", ""],
     "何歳": ["え、わたし、何歳にみえますか", ""],
     "元気": ["元気ですよー", ""],
     "好きな,食べ物": ["チョコレートです", ""],
@@ -42,8 +42,8 @@ var response = {
     "京都の天気": ["京都府の天気予報を表示します", "https://weather.yahoo.co.jp/weather/jp/26/"],
     "奈良の天気": ["奈良県の天気予報を表示します", "https://weather.yahoo.co.jp/weather/jp/29/"],
     "兵庫の天気": ["兵庫県の天気予報を表示します", "https://weather.yahoo.co.jp/weather/jp/28/"],
-    "Wikipedia": ["Wikipediaで何を調べますか？",""],
-    "ウィキペディア": ["Wikipediaで何を調べますか？",""]    };
+    "Wikipedia": ["Wikipediaで何を調べますか？単語を言ってください",""],
+    "ウィキペディア": ["Wikipediaで何を調べますか？単語を言ってください",""]    };
 
 const startButton = document.querySelector('#startButton'); // 開始ボタン
 const stopButton = document.querySelector('#stopButton'); // 停止ボタン
@@ -165,7 +165,7 @@ asr.onresult = function(event){
             answer = ret[0];
             webpage = ret[1];
 
-            if (answer == "Wikipediaで何を調べますか？") {
+            if (answer == "Wikipediaで何を調べますか？単語を言ってください") {
                 flag_wiki = 1;
             }
         
