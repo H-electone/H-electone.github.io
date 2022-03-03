@@ -1,0 +1,35 @@
+h1{
+  background-color: #8EE3C8;
+  color: #3956A3;
+}
+body{
+  background-color: #e6f1ff;
+}
+#startButton {
+  color: #fff;
+  background-color: #3956A3;
+  font-size: 20px;
+  width: 80px;
+  height: 35px;
+  border-radius:30px;
+  border: none;
+}
+#stopButton {
+  color: #fff;
+  background-color: #3956A3;
+  font-size: 20px;
+  width: 80px;
+  height: 35px;
+  border-radius:30px;
+  border: none;
+}
+#example {
+  color: rgb(94, 94, 94);
+}
+#credit {
+  width: 99%;
+  margin: 0%;
+  position: fixed;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  background-color: #8EE3C8;
+}
