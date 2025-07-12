@@ -12,7 +12,8 @@
   {
     "name": "フリーター2",
     "members": ["咲也", "三角", "紬", "密", "東"],
-    "value": 51
+    "value": 51,
+    "exclusiveGroup": "フリーター"
   },
   {
     "name": "ルーキーズ",
@@ -52,7 +53,8 @@
   {
     "name": "フリーター",
     "members": ["三角", "紬", "東"],
-    "value": 24
+    "value": 24,
+    "exclusiveGroup": "フリーター"
   },
   {
     "name": "芸術家肌",
@@ -102,7 +104,8 @@
   {
     "name": "フリーター3",
     "members": ["紬", "密"],
-    "value": 15
+    "value": 15,
+    "exclusiveGroup": "フリーター"
   }
 
 ]

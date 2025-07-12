@@ -8,7 +8,20 @@
   <h1>劇団員リンクスキル判定</h1>
 
   <label for="member-select">劇団員を1人選んでください:</label>
-  <select id="member-select"></select>
+  <!-- <select id="member-select"></select> -->
+  <label for="group-select">組を選択してください:</label>
+  <select id="group-select">
+    <option value="">-- 組を選択 --</option>
+    <option value="春組">春組</option>
+    <option value="夏組">夏組</option>
+    <option value="秋組">秋組</option>
+    <option value="冬組">冬組</option>
+  </select>
+  <br><br>
+  <label for="member-select">劇団員を選択してください:</label>
+  <select id="member-select">
+    <option value="">-- 劇団員を選択 --</option>
+  </select>
 
   <h2>該当グループ（合計値順）</h2>
   <div id="result"></div>
