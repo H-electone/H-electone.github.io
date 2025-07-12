@@ -1,10 +1,4 @@
 let allSkills = [];
-/* let allMembers = [
-  "咲也", "真澄", "綴", "至", "シトロン", "千景", // 春
-  "天馬", "幸", "椋", "三角", "一成", "九門", // 夏
-  "万里", "十座", "太一", "臣", "左京", "莇", // 秋
-  "紬", "丞", "誉", "密", "東", "ガイ"           // 冬
-]; */
 
 const membersByGroup = {
   春組: ["咲也", "真澄", "綴", "至", "シトロン", "千景"],
@@ -71,8 +65,23 @@ function findTopGroupsIncludingMember(memberName) {
   }).filter(g => g && g.total > 0);
 
   evaluated.sort((a, b) => b.total - a.total);
-  const max = evaluated[0]?.total || 0;
-  return evaluated.filter(g => g.total === max);
+
+  // 上位20件までを一度切り出す
+  const top20 = evaluated.slice(0, 20);
+
+  // 20件未満ならそのまま返す
+  if (evaluated.length <= 20) return evaluated;
+
+  // 20位の合計値を取得
+  const threshold = top20[top20.length - 1].total;
+
+  // 21位以降で同じ合計値を持つグループを探して追加
+  const extended = evaluated.slice(20).filter(g => g.total === threshold);
+
+  // top20 + 同値のグループを返す
+  return [...top20, ...extended];
+
+
 }
 
 function getTop3NonExclusiveCombos(skills) {
